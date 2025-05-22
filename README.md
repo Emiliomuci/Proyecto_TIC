@@ -1,10 +1,10 @@
-🐳 Proyecto Comparativo de Rendimiento: Máquina Virtual (VM) vs Docker
+## Proyecto Comparativo de Rendimiento: Máquina Virtual (VM) vs Docker
 
-📘 Introducción
+## Introducción
 
 Este proyecto compara el rendimiento y el uso de recursos entre una máquina virtual (VirtualBox) y un contenedor Docker, ejecutando una aplicación sencilla de Node.js que simula una playlist musical.
 
-⚙️ Configuración del entorno
+## Configuración del entorno
 
 Aspecto	Máquina Virtual (VM)	Docker
 Hipervisor	VirtualBox	Docker Engine
@@ -14,7 +14,7 @@ Aplicación ejecutada	App Node.js (playlist musical)	Misma app Node.js en conten
 Puertos	3000 (expuesto en VM)	3000 (mapeado al host)
 🗂️ Estructura del Proyecto
 
-playlist-vm-vs-docker/
+## playlist-vm-vs-docker/
 │
 ├── app/              # Código fuente Node.js (servidor y estáticos)
 ├── docker/           # Dockerfile para construir la imagen
@@ -44,7 +44,7 @@ docker run -d -p 3000:3000 playlist-app
 Accede desde el navegador a:
 http://localhost:3000
 
-🎵 Detalles de la Aplicación
+## Detalles de la Aplicación
 
 La app fue desarrollada en Node.js + Express y permite:
 
@@ -53,7 +53,7 @@ Agregar nuevas canciones mediante un formulario
 Servir la interfaz en el puerto 3000
 Esta app se usó para medir consumo de recursos y rendimiento bajo carga en ambos entornos.
 
-📊 Métricas Evaluadas
+## Métricas Evaluadas
 
 Métrica	VM	Docker
 Uso CPU (inactivo)	5%	2%
@@ -90,7 +90,7 @@ Potenciales riesgos de seguridad
 Portabilidad y Flexibilidad
 Docker sobresale por su portabilidad, facilidad de integración en pipelines CI/CD y su uso eficiente de recursos.
 
-🧾 Conclusión
+## Conclusión
 
 Docker es ideal para un desarrollo moderno, ágil y eficiente.
 Las máquinas virtuales siguen siendo útiles en entornos con altos requerimientos de aislamiento, pruebas de SO completos o replicación realista de infraestructuras.
@@ -105,11 +105,11 @@ Medir espacio disco (VM)	du -sh playlist-app
 Prueba carga HTTP	ab -n 1000 -c 50 http://localhost:3000/
 Benchmark CPU (sysbench)	sysbench cpu --cpu-max-prime=20000 run
 Test velocidad disco (fio)	fio --name=prueba --rw=write --bs=1M --size=500M --runtime=60
-👤 Autor
+## Autor
 
 Emilio Muciño Segura
 
 📄 Licencia
 
-Este proyecto está licenciado bajo la MIT License.
+Este proyecto está licenciado bajo la MIT License
 
