@@ -1,4 +1,5 @@
 ## Proyecto Comparativo de Rendimiento: Máquina Virtual (VM) vs Docker
+## PLAYLIST MUSICAL
 
 ## Introducción
 Las máquinas virtuales (VM) y los contenedores Docker son tecnologías clave para ejecutar entornos aislados en un mismo equipo físico. Las VM emulan un sistema operativo completo, ofreciendo un alto aislamiento pero con mayor uso de recursos y tiempos de arranque más largos. En contraste, Docker usa contenedores que comparten el kernel del sistema anfitrión, lo que permite un arranque rápido y menor consumo, aunque con un aislamiento más limitado.
