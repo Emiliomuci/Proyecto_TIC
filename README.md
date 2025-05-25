@@ -1,7 +1,10 @@
 ## Proyecto Comparativo de Rendimiento: Máquina Virtual (VM) vs Docker
 
 ## Introducción
-Este proyecto compara el rendimiento y el uso de recursos entre una máquina virtual (VirtualBox) y un contenedor Docker, ejecutando una aplicación sencilla de Node.js que simula una playlist musical.
+Las máquinas virtuales (VM) y los contenedores Docker son tecnologías clave para ejecutar entornos aislados en un mismo equipo físico. Las VM emulan un sistema operativo completo, ofreciendo un alto aislamiento pero con mayor uso de recursos y tiempos de arranque más largos. En contraste, Docker usa contenedores que comparten el kernel del sistema anfitrión, lo que permite un arranque rápido y menor consumo, aunque con un aislamiento más limitado.
+
+Este proyecto compara el rendimiento y uso de recursos entre una máquina virtual con VirtualBox y un contenedor Docker, usando una aplicación simple en Node.js que simula una playlist musical. Se analizan métricas como uso de CPU, memoria, espacio en disco y tiempos de arranque, así como aspectos de seguridad y portabilidad, para entender mejor cuándo conviene usar cada tecnología.
+
 
 ## Configuración del entorno
 Aspecto	Máquina Virtual (VM)	Docker
@@ -9,28 +12,7 @@ Hipervisor	VirtualBox	Docker Engine
 Sistema operativo	Ubuntu Server 22.04 LTS	Imagen base node:18-alpine
 Recursos asignados	2 CPU, 2 GB RAM, 20 GB disco	Uso dinámico, limitado por contenedor
 Aplicación ejecutada	App Node.js (playlist musical)	Misma app Node.js en contenedor
-Puertos	3000 (expuesto en VM)	3000 (mapeado al host)
-
-
-### Estructura del Proyecto
-# Proyecto_TIC/  
-│
--  .gitignore        # Archivos ignorados por Git  
-│
-│
--  README.md         # Documentación del proyecto
-│
-│
--  install.ipynb     # Dependencias y scripts de Node.js
-
-# Proyecto_TIC/vm_vs_docker_benchmark/
-│
-│
-- notebooks/         # Código fuente Node.js (servidor y estáticos). Dockerfile para construir la imagen
-│
-│
-- scripts/           # Información extra y gráficas 
-
+Puertos	3000 (expuesto en VM)	3000 (mapeado al host).
 
 ## Cómo ejecutar
 
