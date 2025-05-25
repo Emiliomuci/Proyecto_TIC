@@ -1,0 +1,24 @@
+
+
+## 1. Configurar Docker
+
+### 1.1 Requisitos
+
+- Tener instalado Docker Desktop o Docker Engine.
+- Descarga e instrucciones: https://www.docker.com/get-started
+
+
+### 1.2  Estructura del proyecto para Docker
+
+- La carpeta docker/ debe contener el archivo Dockerfile.
+- La carpeta raíz debe contener la carpeta app/ con el código de la aplicación.
+
+### 1.3 Usar el script para construir y correr el contenedor Docker
+1.- Dar permisos de ejecución al script:
+    chmod +x scripts/docker_setup.sh
+
+2.- Ejecutar el script:
+./scripts/docker_setup.sh
+
+3.- Abrir navegador en http://localhost:3000
+
