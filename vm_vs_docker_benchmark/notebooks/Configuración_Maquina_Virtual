@@ -1,0 +1,24 @@
+
+
+
+## 1. Configurar maquina virtual Ubuntu
+
+### 1.1 Requisitos
+- Máquina virtual Ubuntu 20.04 o superior.
+- Acceso por terminal SSH o consola.
+
+### 1.2 Copiar el proyecto a la VM
+
+- scp -r ~/proyectos/playlist-app usuario@ip_vm:~/proyectos/
+
+### 1.3 Usar el script para preparar la VM
+1.- Dar permisos al script:
+- chmod +x scripts/vm_setup.sh
+
+2.- Ejecutar el script en la VM (desde la carpeta donde esté el script):
+- ./scripts/vm_setup.sh
+
+
+
+### 1.4 Acceder a la app
+- http://<IP_DE_LA_VM>:3000
