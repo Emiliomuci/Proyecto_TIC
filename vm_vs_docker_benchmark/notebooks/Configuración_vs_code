@@ -1,0 +1,53 @@
+# Guía paso a paso para configurar y correr la Playlist Musical
+
+---
+
+## 1. Configurar ambiente de desarrollo en VS Code
+
+### 1.1 Instalar VS Code
+
+- Descarga e instala Visual Studio Code desde:  
+  [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+### 1.2 Abrir el proyecto
+
+- Clona o descarga el proyecto en tu equipo.
+- Abre VS Code.
+- Selecciona **Archivo > Abrir carpeta** y navega a la carpeta raíz del proyecto.
+
+### 1.3 Instalar extensiones recomendadas
+
+Para trabajar cómodamente con HTML, CSS y JavaScript instala estas extensiones:
+
+- **Live Server** (para correr un servidor local y ver cambios en vivo)
+- **Prettier** (para formatear código)
+- **ESLint** (opcional, para mantener calidad en JavaScript)
+
+### 1.4 Ejecutar el proyecto en modo desarrollo
+
+- Abre el archivo `index.html`.
+- Haz clic derecho y selecciona **Open with Live Server**.
+- Esto abrirá tu navegador en una dirección tipo `http://127.0.0.1:5500/` donde verás la app.
+
+> Cada vez que guardes cambios en HTML, CSS o JS el navegador se refrescará automáticamente.
+
+---
+
+## 2. Ejecutar la app con Node.js localmente
+
+### 2.1 Requisitos
+
+- Tener instalado Node.js (versión 18 recomendada).  
+  Puedes descargarlo desde: [https://nodejs.org/](https://nodejs.org/)
+
+### 2.2 Instalar dependencias
+
+En la terminal, en la carpeta raíz del proyecto, corre:
+
+```bash
+npm install
+
+
+### 2.3 Ejecutar la app
+npm start
+
