@@ -15,13 +15,16 @@ Puertos	3000 (expuesto en VM)	3000 (mapeado al host)
 ### Estructura del Proyecto
 # Proyecto_TIC/  
 │
-├── .gitignore        # Archivos ignorados por Git        
+├── .gitignore        # Archivos ignorados por Git  
+│
 ├── README.md         # Documentación del proyecto
+│
 ├── install.ipynb     # Dependencias y scripts de Node.js
 
 # Proyecto_TIC/vm_vs_docker_benchmark/
 │
 ├── notebooks/         # Código fuente Node.js (servidor y estáticos). Dockerfile para construir la imagen
+│
 ├── scripts/           # Información extra y gráficas 
 
 
