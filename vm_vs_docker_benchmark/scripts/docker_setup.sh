@@ -1,8 +1,17 @@
 #!/bin/bash
-echo "🐳 Setting up Docker environment for benchmarking..."
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y python3 python3-pip sysbench git curl procps
-pip3 install --upgrade pip
-pip3 install jupyter matplotlib psutil
-echo "✅ Docker/WSL2 setup complete!"
-echo "➡️ To start Jupyter Notebook, run: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser"
+
+# 1. Construir la imagen Docker
+echo "Construyendo la imagen Docker..."
+docker build -t playlist-node-app .
+
+# 2. Verificar si el contenedor ya existe y eliminarlo si es necesario
+if [ "$(docker ps -aq -f name=playlist-container)" ]; then
+  echo "Eliminando contenedor existente..."
+  docker rm -f playlist-container
+fi
+
+# 3. Ejecutar el contenedor
+echo "Iniciando el contenedor..."
+docker run -d -p 3000:3000 --name playlist-container playlist-node-app
+
+echo "Aplicación desplegada en http://localhost:3000"
