@@ -10,18 +10,20 @@ Sistema operativo	Ubuntu Server 22.04 LTS	Imagen base node:18-alpine
 Recursos asignados	2 CPU, 2 GB RAM, 20 GB disco	Uso dinámico, limitado por contenedor
 Aplicación ejecutada	App Node.js (playlist musical)	Misma app Node.js en contenedor
 Puertos	3000 (expuesto en VM)	3000 (mapeado al host)
-🗂️ Estructura del Proyecto
 
-## Proyecto_TIC/vm_vs_docker_benchmark/
-│
-├── notebooks/         # Código fuente Node.js (servidor y estáticos). Dockerfile para construir la imagen
-├── scripts/           #Información extra y gráficas 
 
-## Proyecto_TIC/  
+### Estructura del Proyecto
+# Proyecto_TIC/  
 │
-├── .gitignore/       # Archivos ignorados por Git        
+├── .gitignore        # Archivos ignorados por Git        
 ├── README.md         # Documentación del proyecto
 ├── install.ipynb     # Dependencias y scripts de Node.js
+
+# Proyecto_TIC/vm_vs_docker_benchmark/
+│
+├── notebooks/         # Código fuente Node.js (servidor y estáticos). Dockerfile para construir la imagen
+├── scripts/           # Información extra y gráficas 
+
 
 ▶️ Cómo ejecutar
 
