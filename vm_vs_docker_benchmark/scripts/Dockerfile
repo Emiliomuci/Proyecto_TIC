@@ -1,8 +1,12 @@
-FROM python:3.10-slim
-RUN apt update && apt install -y sysbench git curl procps \
-    && pip install --upgrade pip \
-    && pip install jupyter matplotlib psutil
+# docker/Dockerfile
+FROM node:18-alpine
+
 WORKDIR /app
-COPY . .
-EXPOSE 8888
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=''"]
+
+COPY ../app .
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
