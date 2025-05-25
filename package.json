@@ -4,7 +4,7 @@
   "description": "Aplicación Node.js para playlist musical, usada para comparación de rendimiento VM vs Docker",
   "main": "index.js",
   "scripts": {
-    "start": "node app/index.js"
+    "start": "node scripts/index.js"
   },
   "author": "Emilio Muciño Segura",
   "license": "MIT",
