@@ -17,18 +17,22 @@ Puertos	3000 (expuesto en VM)	3000 (mapeado al host)
 │
 ├── .gitignore        # Archivos ignorados por Git  
 │
+│
 ├── README.md         # Documentación del proyecto
+│
 │
 ├── install.ipynb     # Dependencias y scripts de Node.js
 
 # Proyecto_TIC/vm_vs_docker_benchmark/
 │
+│
 ├── notebooks/         # Código fuente Node.js (servidor y estáticos). Dockerfile para construir la imagen
+│
 │
 ├── scripts/           # Información extra y gráficas 
 
 
-▶️ Cómo ejecutar
+## Cómo ejecutar
 
 En Máquina Virtual (VM)
 # Instalar Node.js
