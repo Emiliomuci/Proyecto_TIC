@@ -1,9 +1,25 @@
 #!/bin/bash
-echo "🚀 Setting up environment for benchmarking..."
+
+# Actualiza el sistema
+echo "Actualizando sistema..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y python3 python3-pip sysbench docker.io git curl procps
-pip3 install --upgrade pip
-pip3 install jupyter matplotlib psutil
-sudo usermod -aG docker $USER
-echo "✅ Setup complete! Please restart your VM for Docker permissions to take effect."
-echo "➡️ To start Jupyter, run: jupyter notebook"
+
+# Instala Node.js (usando NodeSource)
+echo "Instalando Node.js..."
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Verifica instalación
+node -v
+npm -v
+
+# Navega a la carpeta del proyecto (ajusta la ruta si es necesario)
+cd ~/proyectos/playlist-app
+
+# Instala las dependencias del proyecto
+echo "Instalando dependencias del proyecto..."
+npm install
+
+# Ejecuta la aplicación
+echo "Iniciando aplicación..."
+npm start
