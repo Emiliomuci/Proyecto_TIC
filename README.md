@@ -1,11 +1,9 @@
 ## Proyecto Comparativo de Rendimiento: Máquina Virtual (VM) vs Docker
 
 ## Introducción
-
 Este proyecto compara el rendimiento y el uso de recursos entre una máquina virtual (VirtualBox) y un contenedor Docker, ejecutando una aplicación sencilla de Node.js que simula una playlist musical.
 
 ## Configuración del entorno
-
 Aspecto	Máquina Virtual (VM)	Docker
 Hipervisor	VirtualBox	Docker Engine
 Sistema operativo	Ubuntu Server 22.04 LTS	Imagen base node:18-alpine
@@ -14,17 +12,17 @@ Aplicación ejecutada	App Node.js (playlist musical)	Misma app Node.js en conten
 Puertos	3000 (expuesto en VM)	3000 (mapeado al host)
 🗂️ Estructura del Proyecto
 
-## playlist-vm-vs-docker/
+## Proyecto_TIC/vm_vs_docker_benchmark/
 │
-├── app/              # Código fuente Node.js (servidor y estáticos)
-├── docker/           # Dockerfile para construir la imagen
-├── docs/             # Información extra y gráficas
-├── tests/            # Pruebas unitarias (opcional)
+├── notebooks/         # Código fuente Node.js (servidor y estáticos). Dockerfile para construir la imagen
+├── scripts/           #Información extra y gráficas 
+
+## Proyecto_TIC/  
 │
-├── .gitignore        # Archivos ignorados por Git
+├── .gitignore/       # Archivos ignorados por Git        
 ├── README.md         # Documentación del proyecto
-├── package.json      # Dependencias y scripts de Node.js
-└── LICENSE           # Licencia del proyecto (MIT)
+├── install.ipynb     # Dependencias y scripts de Node.js
+
 ▶️ Cómo ejecutar
 
 En Máquina Virtual (VM)
@@ -45,7 +43,6 @@ Accede desde el navegador a:
 http://localhost:3000
 
 ## Detalles de la Aplicación
-
 La app fue desarrollada en Node.js + Express y permite:
 
 Ver una lista de canciones (playlist)
@@ -53,8 +50,18 @@ Agregar nuevas canciones mediante un formulario
 Servir la interfaz en el puerto 3000
 Esta app se usó para medir consumo de recursos y rendimiento bajo carga en ambos entornos.
 
-## Métricas Evaluadas
+## Comandos Útiles
+Acción	Comando
+Construir imagen Docker	docker build -t playlist-app .
+Ejecutar contenedor Docker	docker run -d -p 3000:3000 playlist-app
+Ver estadísticas Docker	docker stats
+Monitorear VM (Linux)	top, htop
+Medir espacio disco (VM)	du -sh playlist-app
+Prueba carga HTTP	ab -n 1000 -c 50 http://localhost:3000/
+Benchmark CPU (sysbench)	sysbench cpu --cpu-max-prime=20000 run
+Test velocidad disco (fio)	fio --name=prueba --rw=write --bs=1M --size=500M --runtime=60
 
+## Métricas Evaluadas
 Métrica	VM	Docker
 Uso CPU (inactivo)	5%	2%
 Uso RAM	500 MB	150 MB
@@ -91,26 +98,13 @@ Portabilidad y Flexibilidad
 Docker sobresale por su portabilidad, facilidad de integración en pipelines CI/CD y su uso eficiente de recursos.
 
 ## Conclusión
-
 Docker es ideal para un desarrollo moderno, ágil y eficiente.
 Las máquinas virtuales siguen siendo útiles en entornos con altos requerimientos de aislamiento, pruebas de SO completos o replicación realista de infraestructuras.
-🛠️ Comandos Útiles
 
-Acción	Comando
-Construir imagen Docker	docker build -t playlist-app .
-Ejecutar contenedor Docker	docker run -d -p 3000:3000 playlist-app
-Ver estadísticas Docker	docker stats
-Monitorear VM (Linux)	top, htop
-Medir espacio disco (VM)	du -sh playlist-app
-Prueba carga HTTP	ab -n 1000 -c 50 http://localhost:3000/
-Benchmark CPU (sysbench)	sysbench cpu --cpu-max-prime=20000 run
-Test velocidad disco (fio)	fio --name=prueba --rw=write --bs=1M --size=500M --runtime=60
 ## Autor
-
 Emilio Muciño Segura
 
 ## Licencia
-
 Copyright (c) 2025 Emilio Muciño Segura
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
